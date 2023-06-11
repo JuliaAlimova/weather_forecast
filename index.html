@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWeather</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&family=Overpass&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="currrent_weather">
+            <div class="current_city">
+                <div class="main_info">
+                    <h1 class="city_name" id="city_name">Текущая погода в <select id="selectCity"
+                            class="select"></select></h1>
+                    <img src="" alt="Weather icon" id="mainIcon" width="140px" height="140px">
+                    <div class="temp" id="temp"></div>
+                    <p class="current_date" id="current_date"></p>
+                </div>
+                <div class="form_toggle" id="selectMetric">
+                    <input class="selectMetric" id="metric" type="radio" name="selectMetric" value="metric" checked>
+                    <label for="metric">°C</label>
+                    <input class="selectMetric" id="imperial" type="radio" name="selectMetric" value="imperial">
+                    <label for="imperial">°F</label>
+                </div>
+            </div>
+
+            <div class="options_weather">
+                <p>Описание - <img src="" width="55px" height="55px" alt="Картинка" id="mainIcon"> <span
+                        id="description"></span></p>
+                <p>Ощущается как - <img src="icon/temperature.png" alt="Картинка" width="45px" height="45px"> <span
+                        id="feels_like"></span></p>
+                <p>Направление ветра - <img src="icon/wind-direction.png" alt="Картинка" width="45px" height="45px">
+                    <span id="wind_direction"></span>
+                </p>
+                <p>Скорость ветра - <img src="icon/wind.png" alt="Картинка" width="45px" height="45px"> <span
+                        id="wind_speed"></span></p>
+                <p>Давление - <img src="icon/gauge.png" alt="Картинка" width="45px" height="45px"> <span
+                        id="pressure"></span></p>
+                <p>Восход солнца - <img src="icon/sunrise.png" alt="Картинка" width="45px" height="45px"> <span
+                        id="sunrise"></span></p>
+                <p>Закат солнца - <img src="icon/sunset.png" alt="Картинка" width="45px" height="45px"> <span
+                        id="sunset"></span></p>
+            </div>
+        </div>
+        <div class="weather_time">
+            <p>Прогноз на
+                <select id="forecastDay" class="select"></select>
+            </p>
+            <table id="tableForecast">
+                <tr id="time" class="time"></tr>
+                <tr id="img_time_weather" class="img_time_weather"></tr>
+                <tr id="temp_time_weather" class="temp_time_weather"></tr>
+            </table>
+        </div>
+    </main>
+
+
+    <script src="dataService.js"></script>
+    <script src="cityWeather.js"></script>
+    <script src="weatherData.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

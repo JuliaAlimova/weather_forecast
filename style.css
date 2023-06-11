@@ -1,0 +1,158 @@
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-family: "Overpass", sans-serif;
+}
+
+main {
+  background: linear-gradient(248.66deg, #a8c8ed 0%, #7673dc 100%);
+  height: 90vh;
+  display: grid;
+  gap: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 28px;
+  color: #ffffff;
+  padding: 65px;
+}
+
+.currrent_weather {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.current_city {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: end;
+  align-items: start;
+}
+
+.main_info {
+  display: grid;
+  gap: 20px;
+}
+
+.select {
+  background: linear-gradient(
+    116.79deg,
+    rgba(255, 255, 255, 0.48) 0%,
+    rgba(255, 255, 255, 0.12) 99.45%
+  );
+  /* backdrop-filter: blur(50px); */
+  border-radius: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  padding: 8px;
+  outline: none;
+}
+
+#selectCity {
+  font-size: 28px;
+}
+
+option {
+  background: #8a96e3;
+}
+
+.current_date {
+  font-size: 36px;
+}
+
+.temp {
+  display: flex;
+  gap: 10px;
+  font-weight: 100;
+  font-size: 164px;
+  line-height: 197px;
+}
+
+.temp > span {
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+.options_weather {
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: 28px;
+  display: grid;
+  gap: 10px;
+  max-width: 50%;
+  width: 30%;
+}
+
+/* ================================================= */
+
+.weather_time {
+  display: grid;
+  gap: 60px;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+#forecastDay {
+  font-size: 20px;
+}
+
+#tableForecast {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+th {
+  border-bottom: 2px solid #a9d3de;
+  padding: 10px 8px;
+}
+td {
+  padding: 9px 8px;
+}
+
+.img_time_weather img {
+  width: 55px;
+  height: 55px;
+}
+
+/* ============================================= */
+
+.form_toggle {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 100px;
+  width: 100px;
+}
+
+.selectMetric {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.selectMetric:checked + label {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4), 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 100px;
+  padding: 8px 16px;
+  width: max-content;
+}
